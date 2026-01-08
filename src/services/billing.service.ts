@@ -10,7 +10,6 @@ export const applyBestOffer = (
 
   for (const offer of offers) {
     const discount = calculateDiscount(offer, price, quantity);
-    console.log({offer});
     
     if (discount > maxDiscount) {
       maxDiscount = discount;

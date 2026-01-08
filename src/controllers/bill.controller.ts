@@ -46,8 +46,6 @@ export const generateBill = async (
         product.price,
         item.qty
       );
-      console.log({ bestOffer });
-
       const price = product.price * item.qty - discount;
 
       totalDiscount += discount;
