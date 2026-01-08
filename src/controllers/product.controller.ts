@@ -1,12 +1,12 @@
 import { Request, Response } from "express";
-import Product from "../models/Product.model";
+import ProductModel from "../models/product.model";
 
 export const createProduct = async (
   req: Request,
   res: Response
 ): Promise<void> => {
   try {
-    const product = await Product.create(req.body);
+    const product = await ProductModel.create(req.body);
     res.status(201).json(product);
   } catch (error) {
     res.status(500).json({
@@ -21,7 +21,7 @@ export const getProducts = async (
   res: Response
 ): Promise<void> => {
   try {
-    const products = await Product.find().populate("offers");
+    const products = await ProductModel.find().populate("offers");
     res.status(200).json(products);
   } catch (error) {
     res.status(500).json({

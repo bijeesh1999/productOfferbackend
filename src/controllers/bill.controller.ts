@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import Product from "../models/Product.model";
+import Product from "../models/product.model";
 import Bill from "../models/Bill.model";
 import { applyBestOffer } from "../services/billing.service";
 import mongoose from "mongoose";
