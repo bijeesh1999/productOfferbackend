@@ -1,14 +1,9 @@
 {
   "compilerOptions": {
+    "skipLibCheck": true,         // Skips type checking of declaration files (.d.ts)
+    "moduleResolution": "node",   // Helps TS find packages in node_modules
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    
-    /* Other recommended settings for your setup */
-    "target": "ES6",
-    "module": "CommonJS",
     "outDir": "./dist",
-    "rootDir": "./src",
-    "strict": true,
-    "skipLibCheck": true
+    "rootDir": "./src"
   }
 }

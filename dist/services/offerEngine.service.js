@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.calculateDiscount = void 0;
-const calculateDiscount = (offer, price, quantity) => {
+var calculateDiscount = function (offer, price, quantity) {
     switch (offer.type) {
         case "BUY_X_GET_Y":
-            const { buyQty, freeQty } = offer.config;
+            var _a = offer.config, buyQty = _a.buyQty, freeQty = _a.freeQty;
             return Math.floor(quantity / buyQty) * freeQty * price;
         case "PERCENTAGE":
             return (price * quantity * offer.config.discountPercent) / 100;

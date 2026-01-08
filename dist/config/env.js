@@ -34,7 +34,7 @@ var __importStar = (this && this.__importStar) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MONGO_URI = exports.PORT = void 0;
-const dotenv = __importStar(require("dotenv"));
+var dotenv = __importStar(require("dotenv"));
 dotenv.config();
 exports.PORT = process.env.PORT || 5000;
 exports.MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/pos_db';
