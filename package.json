@@ -5,10 +5,10 @@
   "license": "ISC",
   "author": "",
   "type": "commonjs",
-  "main": "src/server.js",
+  "main": "src/server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "src/server.js",
+    "start": "ts-node src/server.ts",
     "dev": "nodemon src/server.ts"
   },
   "devDependencies": {
