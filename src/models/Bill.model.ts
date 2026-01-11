@@ -3,16 +3,16 @@ import mongoose, { Schema } from "mongoose";
 const BillSchema = new Schema({
   items: [
     {
-      productId: Schema.Types.ObjectId,
+      product: { type: {} },
       quantity: Number,
-      appliedOffer: Schema.Types.ObjectId,
+      appliedOffer: { type: {} },
       discountAmount: Number,
-      finalPrice: Number
-    }
+      finalPrice: Number,
+    },
   ],
   totalDiscount: Number,
   finalAmount: Number,
-  createdAt: { type: Date, default: Date.now }
+  createdAt: { type: Date, default: Date.now },
 });
 
 export default mongoose.model("Bill", BillSchema);

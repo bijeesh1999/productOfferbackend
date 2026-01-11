@@ -1,13 +1,11 @@
 // server.ts
 
+import "dotenv/config"; // 🔥 BEST WAY
 import app from "./app";
 import { connectDB } from "./config/db";
 import { startCronJobs } from "./config/cron";
 import { PORT } from "./config/env";
-import cors from "cors";
 
-
-// 1. Connect to Database
 connectDB();
 
 // 2. Start Background Tasks

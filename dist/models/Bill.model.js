@@ -33,19 +33,19 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var mongoose_1 = __importStar(require("mongoose"));
-var BillSchema = new mongoose_1.Schema({
+const mongoose_1 = __importStar(require("mongoose"));
+const BillSchema = new mongoose_1.Schema({
     items: [
         {
-            productId: mongoose_1.Schema.Types.ObjectId,
+            product: { type: {} },
             quantity: Number,
-            appliedOffer: mongoose_1.Schema.Types.ObjectId,
+            appliedOffer: { type: {} },
             discountAmount: Number,
-            finalPrice: Number
-        }
+            finalPrice: Number,
+        },
     ],
     totalDiscount: Number,
     finalAmount: Number,
-    createdAt: { type: Date, default: Date.now }
+    createdAt: { type: Date, default: Date.now },
 });
 exports.default = mongoose_1.default.model("Bill", BillSchema);

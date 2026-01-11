@@ -10,9 +10,9 @@ interface BillItemInput {
 }
 
 interface BillItemOutput {
-  productId: mongoose.Types.ObjectId;
+  product: {};
   quantity: number;
-  appliedOffer?: mongoose.Types.ObjectId;
+  appliedOffer?: {};
   discountAmount: number;
   finalPrice: number;
 }
@@ -52,9 +52,9 @@ export const generateBill = async (
       finalAmount += price;
 
       billItems.push({
-        productId: product._id,
+        product: product,
         quantity: item.qty,
-        appliedOffer: bestOffer?._id,
+        appliedOffer: bestOffer,
         discountAmount: discount,
         finalPrice: price,
       });

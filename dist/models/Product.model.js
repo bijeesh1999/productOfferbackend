@@ -33,12 +33,13 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var mongoose_1 = __importStar(require("mongoose"));
-var ProductSchema = new mongoose_1.Schema({
+const mongoose_1 = __importStar(require("mongoose"));
+const ProductSchema = new mongoose_1.Schema({
     name: { type: String, required: true },
     price: { type: Number, required: true },
     offers: [{ type: mongoose_1.Schema.Types.ObjectId, ref: "Offer" }],
     quantity: { type: Number, default: 1 },
     isActive: { type: Boolean, default: true },
+    image: { type: String, required: false },
 });
 exports.default = mongoose_1.default.model("Product", ProductSchema);

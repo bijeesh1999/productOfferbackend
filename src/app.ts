@@ -4,6 +4,7 @@ import cors from "cors"; // 1. Import CORS here
 import productRoutes from "./routes/product.routes";
 import offerRoutes from "./routes/offer.routes";
 import billRoutes from "./routes/bill.routes";
+import fileRoutes from "./routes/file.routes";
 
 const corsOptions = {
   // Replace this with your actual Vercel URL
@@ -17,7 +18,6 @@ const app = express();
 
 // 2. Apply CORS immediately after initializing app
 app.use(cors(corsOptions));
-
 // 3. Body parser
 app.use(express.json());
 
@@ -25,5 +25,6 @@ app.use(express.json());
 app.use("/api/products", productRoutes);
 app.use("/api/offers", offerRoutes);
 app.use("/api/bill", billRoutes);
+app.use("/api/products/file", fileRoutes);
 
 export default app;
